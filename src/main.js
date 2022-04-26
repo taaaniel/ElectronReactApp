@@ -16,10 +16,18 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  // mainWindow.webContents.session.resolveProxy(
+  //   "http://proxy-emea.sennheiser.ads:3128/",
+  //   function (x) {
+  //     console.log("from-proxy-sennheiser", x);
+  //   }
+  // );
+
+  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 };
 
 // This method will be called when Electron has finished
